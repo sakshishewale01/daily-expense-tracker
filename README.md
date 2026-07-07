@@ -2,9 +2,6 @@
 
 A modern, full-stack expense tracking application built with React, Node.js, Express, and MySQL. Designed as a portfolio-ready project with a clean SaaS-style UI, complete CRUD functionality, authentication, and data visualizations.
 
-![Status](https://img.shields.io/badge/status-complete-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-
 ---
 
 ## 📖 Project Overview
