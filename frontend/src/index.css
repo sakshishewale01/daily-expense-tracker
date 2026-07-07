@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface-light text-slate-800 antialiased transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-surface-dark text-slate-100;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/40;
+  }
+
+  .card {
+    @apply bg-white dark:bg-slate-900/80 rounded-2xl shadow-card border border-slate-100 dark:border-slate-800 transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-0.5 hover:shadow-glow;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-500 to-brand-600
+      px-4 py-2.5 text-sm font-semibold text-white shadow-glow transition-all duration-200
+      hover:from-brand-600 hover:to-brand-700 hover:shadow-lg active:scale-[0.98]
+      disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700
+      bg-white dark:bg-slate-800 px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-200
+      transition-all duration-200 hover:bg-slate-50 dark:hover:bg-slate-700 active:scale-[0.98];
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-red-500 px-4 py-2.5 text-sm font-semibold
+      text-white shadow-soft transition-all duration-200 hover:bg-red-600 active:scale-[0.98];
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/70
+      px-4 py-2.5 text-sm text-slate-800 dark:text-slate-100 placeholder:text-slate-400
+      transition-all duration-200 focus:border-brand-400 focus:ring-4 focus:ring-brand-100
+      dark:focus:ring-brand-900/40 outline-none;
+  }
+
+  .label-text {
+    @apply mb-1.5 block text-sm font-medium text-slate-600 dark:text-slate-300;
+  }
+
+  .page-transition {
+    @apply animate-fade-in;
+  }
+}
